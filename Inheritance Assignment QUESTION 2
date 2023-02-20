@@ -1,1 +1,87 @@
+// ENE211-0006/2020
+// ERICK GITONGA
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Person class with age, first name and last name attributes
+class Person {
+private:
+    int age;
+    string firstname;
+    string lastname;
+public:
+    // Constructor to initialize class data members
+    Person(int age, string firstname, string lastname) {
+        this->age = age;
+        this->firstname = firstname;
+        this->lastname = lastname;
+    }
+    // Method to display class data members
+    void getValues() {
+        cout << "Age: " << age << endl;
+        cout << "First Name: " << firstname << endl;
+        cout << "Last Name: " << lastname << endl;
+    }
+    // Method to set class data members
+    void setValues(int age, string firstname, string lastname) {
+        this->age = age;
+        this->firstname = firstname;
+        this->lastname = lastname;
+    }
+};
+
+// Student class that inherits from Person and adds institution, year, and registration number attributes
+class Student : public Person {
+private:
+    string institution;
+    int year;
+    string reg_number;
+public:
+    // Constructor to initialize class data members
+    Student(int age, string firstname, string lastname, string institution, int year, string reg_number) : Person(age, firstname, lastname) {
+        this->institution = institution;
+        this->year = year;
+        this->reg_number = reg_number;
+    }
+    // Method to display class data members
+    void getValues() {
+        Person::getValues();
+        cout << "Institution: " << institution << endl;
+        cout << "Year: " << year << endl;
+        cout << "Registration Number: " << reg_number << endl;
+    }
+    // Method to set class data members
+    void setValues(int age, string firstname, string lastname, string institution, int year, string reg_number) {
+        Person::setValues(age, firstname, lastname);
+        this->institution = institution;
+        this->year = year;
+        this->reg_number = reg_number;
+    }
+};
+
+int main() {
+    // Create a Person object and display its information
+    Person person(33, "Lord", "of Hosts");
+    cout << "Person information:" << endl;
+    person.getValues();
+    // Update the Person object and display its updated information
+    person.setValues(16, "Taylor", "Hebert");
+    cout << "Updated person information:" << endl;
+    person.getValues();
+
+    // Create a Student object and display its information
+    Student student(11, "Hermione", "Granger", "Hogwarts University", 2, "12345");
+    cout << "Student information:" << endl;
+    student.getValues();
+    // Update the Student object and display its updated information
+    student.setValues(22, "Oloo", "Opondo", "JKUAT University", 3, "11934");
+    cout << "Updated student information:" << endl;
+    student.getValues();
+
+    return 0;
+}
 
