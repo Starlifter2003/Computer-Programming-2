@@ -2,4 +2,15 @@
 // ERICK GITONGA
 
 
+// QUESTIION 3(i)
+//To manage and process student details for the given scenario, we can use inheritance to 
+create a structure that represents the different types of courses and their stages. 
+//This involves creating a "Student" base class with common information and subclasses for each
+course type, such as "ICTStudent" or "LawStudent," that contain information unique to that
+course.
+//Inheritance helps us avoid repetition of code and makes it easier to handle
+information for different types of students.
 
+
+
+//QUESTION 3 (ii)
