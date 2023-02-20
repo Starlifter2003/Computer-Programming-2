@@ -28,5 +28,7 @@ int main() {
     
     cout << result;
     cout << "Thank you for using this simple calculator.";
+    
+    return 0;
 }    
   
