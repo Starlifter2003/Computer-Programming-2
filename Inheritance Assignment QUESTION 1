@@ -1,0 +1,52 @@
+// QUESTION 1
+
+
+#include <iostream> // Include the input/output library
+#include <string> // Include the string library
+using namespace std; // Allow us to use cout without the std:: prefix
+
+// Define the base class Computer
+class Computer {
+public:
+    string brand;
+    int year;
+    float price;
+};
+
+// Define the derived class Client, which inherits from Computer
+class Client: public Computer {
+public:
+    int clientId;
+    bool isLaptop;
+};
+
+// Define the derived class Server, which also inherits from Computer
+class Server: public Computer {
+public:
+    int serverId;
+    int numCores;
+};
+
+int main() {
+    // Create a Client object and set its values
+    Client myClient;
+    myClient.brand = "Dell";
+    myClient.year = 2020;
+    myClient.price = 800.00;
+    myClient.clientId = 12345;
+    myClient.isLaptop = true;
+
+    // Create a Server object and set its values
+    Server myServer;
+    myServer.brand = "HP";
+    myServer.year = 2021;
+    myServer.price = 1500.00;
+    myServer.serverId = 98765;
+    myServer.numCores = 8;
+
+    // Print the brand and year of each computer
+    cout << "Client computer: " << myClient.brand << " " << myClient.year << endl;
+    cout << "Server computer: " << myServer.brand << " " << myServer.year << endl;
+
+    return 0; // Return 0 to indicate successful program execution
+}
