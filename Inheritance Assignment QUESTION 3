@@ -14,3 +14,43 @@ information for different types of students.
 
 
 //QUESTION 3 (ii)
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Define the Student class
+class Student {
+public:
+    // Common attributes for all students
+    string name;
+    int age;
+    string gender;
+    string id_number;
+
+    // Constructor to set common attributes
+    Student(string name, int age, string gender, string id_number) {
+        this->name = name;
+        this->age = age;
+        this->gender = gender;
+        this->id_number = id_number;
+    }
+};
+
+int main() {
+    // Create instances of Student
+    Student s1("Jesus", 33, "Male", "ICT001");
+    Student s3("Opondo", 25, "Male", "BUS001");
+
+    // Output student information
+    cout << "Student name: " << s1.name << endl;
+    cout << "Age: " << s1.age << endl;
+    cout << "Gender: " << s1.gender << endl;
+    cout << "ID number: " << s1.id_number << endl << endl;
+
+    cout << "Student name: " << s3.name << endl;
+    cout << "Age: " << s3.age << endl;
+    cout << "Gender: " << s3.gender << endl;
+    cout << "ID number: " << s3.id_number << endl;
+
+    return 0;
+}
